@@ -1,0 +1,12 @@
+.sidebar {
+  text-align: left;
+}
+
+button.why-not {
+  background-color: #EF7200;
+}
+
+button.heard {
+  background-color: #FFFFFF !important;
+  color: #2EAC74;
+}

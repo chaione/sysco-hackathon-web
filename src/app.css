@@ -1,0 +1,23 @@
+.app {
+  height: 100%;
+  text-align: center;
+}
+
+.app .row {
+  height: 100%;
+  border: 1px solid black;
+}
+
+.app .row .content-col {
+  height: 100%;
+}
+
+.app .row .sidebar {
+  height: 100%;
+}
+
+.app .row .panel {
+  background-color: #1C262B;
+  height: 100%;
+  border: 1px solid red;
+}
