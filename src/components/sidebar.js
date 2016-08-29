@@ -8,12 +8,18 @@ import {Row, Col, Button} from 'react-bootstrap'
 import {CHATS} from '../stores/sysco-store'
 
 export default React.createClass({
+  getInitialState () {
+    return {
+      chats: CHATS
+    }
+  },
+
   onClickWhyNot () {
     browserHistory.push('/detail')
   },
 
   renderChats () {
-    return _.map(CHATS, (chat, index) => {
+    return _.map(this.state.chats, (chat, index) => {
       let actionable
       if (chat.actionable) {
         actionable = (
@@ -38,10 +44,6 @@ export default React.createClass({
     console.log()
     return (
       <div className='sidebar'>
-        <div>
-          CHAT
-        </div>
-
         {this.renderChats()}
       </div>
     )

@@ -47,3 +47,28 @@
   width: 75%;
   display: inline-block;
 }
+
+.footer-right {
+  float: right;
+  line-height: 80px;
+  font-size: 16px;
+  text-align: right;
+  padding-right: 15px;
+  color: #7E8184;
+}
+
+.footer-right .larger {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.footer-right .icon {
+  margin-left: 5px;
+}
+
+.footer-left input {
+  height: 80px;
+  background-color: black;
+  border: none;
+  color: #B8B8B8;
+}
