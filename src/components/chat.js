@@ -39,7 +39,15 @@ export default React.createClass({
           <span className='timestamp'> {moment(chat.timestamp).fromNow()} </span>
         </div>
         <div className='content'>
-          {chat.content}
+          {chat.content.map(function(item) {
+            return (
+              <span>
+                {item}
+                <br />
+                <br />
+              </span>
+            )
+          })}
         </div>
         <div className='action-buttons'>
           {actionable}
