@@ -1,0 +1,12 @@
+.panel.overview .overview-section {
+  height: 35%;
+  margin-bottom: 1px;
+}
+
+.panel.overview {
+  overflow: scroll;
+}
+
+.sales-chart {
+  background-color: #181A1C;
+}

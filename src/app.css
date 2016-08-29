@@ -3,16 +3,21 @@
   text-align: center;
 }
 
-.app .row {
+.app .content-row {
   height: 100%;
   border: 1px solid black;
 }
 
-.app .row .content-col {
-  height: 100%;
+.app .content-row.row {
+  margin: 0;
 }
 
-.app .row .sidebar {
+.app .content-row .content-col {
+  height: 100%;
+  padding: 0;
+}
+
+.sidebar {
   height: 100%;
 }
 
