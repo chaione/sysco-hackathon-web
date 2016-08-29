@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import '../styles/footer.css'
 
 import {FormControl} from 'react-bootstrap'
@@ -16,7 +17,8 @@ export default React.createClass({
 
   onSubmit (e) {
     e.preventDefault()
-    this.props.sendChat('hello world')
+    var text = ReactDOM.findDOMNode(this.refs.chat).value
+    this.props.sendRealChat(text)
     this.setState({value: ''})
   },
 
@@ -26,6 +28,7 @@ export default React.createClass({
         <div className='footer-left'>
           <form onSubmit={this.onSubmit}>
             <FormControl
+              ref='chat'
               type='text'
               value={this.state.value}
               placeholder="Say or type something..."

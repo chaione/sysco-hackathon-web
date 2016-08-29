@@ -18,6 +18,18 @@ export default React.createClass({
     }
   },
 
+  sendRealChat (text) {
+    this.state.chats.splice(this.state.chats.length, 0, {
+      sender: 'Me (Sophie)',
+      role: 'client',
+      timestamp: new Date(),
+      content: text,
+      actionable: []
+    })
+
+    this.setState({chats: this.state.chats})
+  },
+
   sendChat (text) {
     if (this.state.chats.length === 1) {
       this.state.chats.splice(this.state.chats.length, 0, {
@@ -91,7 +103,7 @@ export default React.createClass({
 
         </Row>
 
-        <Footer sendChat={this.sendChat} />
+        <Footer sendRealChat={this.sendRealChat} />
       </div>
     )
   }
