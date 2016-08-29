@@ -31,8 +31,7 @@ export default React.createClass({
   },
 
   sendChat (text) {
-    const delay = 30
-    console.log(this.state.chats.length)
+    const delay = 3000
 
     if (this.state.chats.length === 1) {
       this.state.chats.splice(this.state.chats.length, 0, {

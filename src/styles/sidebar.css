@@ -4,6 +4,7 @@
   background-color: #EFEFEF;
   height: 90%;
   overflow: scroll;
+  padding-bottom: 150px;
 }
 
 button {
