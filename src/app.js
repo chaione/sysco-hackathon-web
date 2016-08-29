@@ -2,10 +2,9 @@ import React from 'react'
 import './app.css'
 
 import Sidebar from './components/sidebar'
+import Footer from './components/footer'
 
 import {Grid, Row, Col} from 'react-bootstrap'
-
-import {menus} from './stores/sysco-store'
 
 export default React.createClass({
   getInitialState () {
@@ -25,7 +24,10 @@ export default React.createClass({
           <Col xs={9} className='content-col'>
             {this.props.children}
           </Col>
+
         </Row>
+
+        <Footer />
       </div>
     )
   }

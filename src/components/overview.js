@@ -11,8 +11,15 @@ export default React.createClass({
         <div className='overview-section sales-chart'>
           Suppose to be a chart
         </div>
-        <div className='overview-section inventories'> Menus </div>
-        <div className='overview-section menu-items'> Menu Items </div>
+
+        <div className='overview-section inventories'>
+
+          Suppose to be inventory data
+        </div>
+
+        <div className='overview-section menu-items'>
+          Suppose to be some menu pics
+        </div>
       </div>
     )
   }

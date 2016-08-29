@@ -1,8 +1,21 @@
-html, body, #root {
+html, body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  height: 100%;
-  background-color: #1C262B;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #1F2225;
   color: white;
+}
+
+html {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  border: 1px solid transparent;
+  height: 100%;
+  min-height: 100%;
 }
