@@ -10,7 +10,7 @@ const MENUS = [
 const _now = new Date().getTime()
 
 const CHATS = [
-  { sender: 'Assistant', role: 'bot', timestamp: _now, content: 'Good morning Chef! Looks like the meatball dish didn’t do well last week  ...', actionable: ['Why not', 'Heard'], clicked: false},
+  { sender: 'Assistant', role: 'bot', timestamp: _now, content: 'Good morning Chef! Looks like the meatball dish didn’t do well last week  ...', actionable: ['Show me', 'Heard'], clicked: false},
 ]
 
 const REVIEWS = [

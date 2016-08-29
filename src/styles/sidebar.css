@@ -2,6 +2,8 @@
   text-align: left;
   padding-right: 0px;
   background-color: #EFEFEF;
+  height: 90%;
+  overflow: scroll;
 }
 
 button {
