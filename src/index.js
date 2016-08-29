@@ -2,7 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './app'
 
-import Detail from './components/detail'
+import Reviews from './components/reviews'
+import Items from './components/items'
+import Fruit from './components/fruit'
 import Overview from './components/overview'
 
 import { render } from 'react-dom'
@@ -25,7 +27,9 @@ window._DS = {
 render((
   <Router history={browserHistory}>
     <Route path='/' component={App}>
-      <Route path='detail' component={Detail} />
+      <Route path='reviews' component={Reviews} />
+      <Route path='items' component={Items} />
+      <Route path='fruit' component={Fruit} />
       <IndexRoute component={Overview} />
     </Route>
   </Router>

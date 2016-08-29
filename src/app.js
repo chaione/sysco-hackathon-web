@@ -32,6 +32,7 @@ export default React.createClass({
 
   sendChat (text) {
     const delay = 30
+    console.log(this.state.chats.length)
 
     if (this.state.chats.length === 1) {
       this.state.chats.splice(this.state.chats.length, 0, {
@@ -61,7 +62,7 @@ export default React.createClass({
           })
 
           this.setState({chats: this.state.chats}, () => {
-            browserHistory.push('/detail')
+            browserHistory.push('/reviews')
           })
         }, delay)
       })
@@ -91,10 +92,12 @@ export default React.createClass({
             content: "Chef, lamb has been added to the cart...Now that we’ve got that settled, let’s look at our inventory",
             actionable: ['Quickly, plz', 'Heard']
           })
-          this.setState({chats: this.state.chats})
+          this.setState({chats: this.state.chats}, () => {
+            browserHistory.push('/items')
+          })
         }, delay)
       })
-    } else {
+    } else if (this.state.chats.length === 7) {
       this.state.chats.splice(this.state.chats.length, 0, {
         sender: 'Me (Sophie)',
         role: 'client',
@@ -129,6 +132,56 @@ export default React.createClass({
           this.setState({chats: this.state.chats})
         }, delay)
       })
+    } else if (this.state.chats.length === 10) {
+      this.state.chats.splice(this.state.chats.length, 0, {
+        sender: 'Me (Sophie)',
+        role: 'client',
+        timestamp: new Date(),
+        content: `Let's go with Hierloom tomatoes`,
+        actionable: []
+      })
+
+      this.state.chats.splice(this.state.chats.length, 0, {
+        sender: 'Assistant',
+        role: 'bot',
+        timestamp: new Date(),
+        content: 'Yes, Chef! ...',
+        actionable: []
+      })
+
+      this.setState({chats: this.state.chats}, () => {
+        setTimeout(() => {
+          this.state.chats.splice(this.state.chats.length, 0, {
+            sender: 'Assistant',
+            role: 'bot',
+            timestamp: new Date(),
+            content: `Your delivery is due at 2:00PM and is estimated 13 min early. Will someone be ready to receive it?`,
+            actionable: ["We'll be here", 'No']
+          })
+
+          this.setState({chats: this.state.chats}, () => {
+            browserHistory.push('/fruit')
+          })
+        }, delay)
+      })
+    } else if (this.state.chats.length === 13) {
+      this.state.chats.splice(this.state.chats.length, 0, {
+        sender: 'Me (Sophie)',
+        role: 'client',
+        timestamp: new Date(),
+        content: `We'll be here!`,
+        actionable: []
+      })
+
+      this.state.chats.splice(this.state.chats.length, 0, {
+        sender: 'Assistant',
+        role: 'bot',
+        timestamp: new Date(),
+        content: 'Yes, Chef! We are all set!',
+        actionable: []
+      })
+
+      this.setState({chats: this.state.chats})
     }
   },
 

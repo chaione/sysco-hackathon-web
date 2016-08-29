@@ -2,6 +2,9 @@ import React from 'react'
 import ReactHighcharts from 'react-highcharts'
 import '../styles/overview.css'
 
+import MenuReportPanel from '../images/menu-report-panel.png'
+import WhatsNewPanel from '../images/whats-new-panel.png'
+import FeaturedItemBar from '../images/featured-item-bar.png'
 import {Row, Col, Button} from 'react-bootstrap'
 
 export default React.createClass({
@@ -10,16 +13,16 @@ export default React.createClass({
       <div className='panel overview'>
         <div className='overview-section top'>
           <div className='top-item menu-report'>
-            <div className='title'> MENU REPORT </div>
+            <img src={MenuReportPanel} width="100%" />
           </div>
 
           <div className='top-item whats-new'>
-            <div className='title'> WHAT'S NEW </div>
+            <img src={WhatsNewPanel} width="100%" />
           </div>
         </div>
 
         <div className='overview-section featured-items'>
-          Suppose to be some featured items
+          <img src={FeaturedItemBar} width="100%" />
         </div>
       </div>
     )

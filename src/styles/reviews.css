@@ -1,0 +1,5 @@
+.panel.reviews .top {
+  height: 100%;
+  overflow: scroll;
+  text-align: left;
+}
