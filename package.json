@@ -26,5 +26,6 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js"
-  }
+  },
+  "homepage": "https://chaione.github.io/sysco-hackathon-web/"
 }
