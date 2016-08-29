@@ -16,6 +16,7 @@ export default React.createClass({
 
   onSubmit (e) {
     e.preventDefault()
+    this.props.sendChat('hello world')
     this.setState({value: ''})
   },
 
@@ -43,4 +44,3 @@ export default React.createClass({
     )
   }
 })
-
