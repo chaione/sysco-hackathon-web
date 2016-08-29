@@ -1,12 +1,74 @@
 .sidebar {
   text-align: left;
+  padding-right: 5px;
 }
 
-button.why-not {
-  background-color: #EF7200;
+button {
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid;
+  border-radius: 25px;
 }
 
-button.heard {
+.action-buttons {
+  margin-top: 15px;
+  text-align: center;
+}
+
+button.orange {
+  background-color: #EF7200 !important;
+  color: white;
+  margin-right: 5px;
+}
+
+button.white {
   background-color: #FFFFFF !important;
   color: #2EAC74;
+}
+
+.title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  color: #FF3500;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.chats {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.chat {
+  margin-bottom: 5px;
+}
+
+.spliter {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.chat .sender-name {
+  margin-bottom: 10px;
+}
+
+.chat .sender-name .timestamp {
+  color: #B8B8B8;
+  float: right;
+}
+
+.chat.bot {
+  color: #09B794;
+}
+
+.chat.client {
+  color: #EF7200;
+}
+
+.chat.sysco {
+  color: #E8E533;
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import _ from 'lodash'
 import '../styles/sidebar.css'
 import { browserHistory } from 'react-router'
+import moment from 'moment'
 
 import {Row, Col, Button} from 'react-bootstrap'
 
@@ -24,27 +25,35 @@ export default React.createClass({
       if (chat.actionable) {
         actionable = (
           <div>
-            <button className='why-not' onClick={this.onClickWhyNot}> Why not </button>
-            <button className='heard'> Heard </button>
+            <button className='orange' onClick={this.onClickWhyNot}> Why not </button>
+            <button className='white'> Heard </button>
           </div>
         )
       }
 
       return (
-        <div key={index}>
-          {chat.sender}
+        <li className={'chat ' + chat.role} key={index}>
+          <div className='spliter'>_</div>
+          <div className='sender-name'>
+            {chat.sender}
+            <span className='timestamp'> {moment(chat.timestamp).fromNow()} </span>
+          </div>
           {chat.content}
-          {actionable}
-        </div>
+          <div className='action-buttons'>
+            {actionable}
+          </div>
+        </li>
       )
     })
   },
 
   render () {
-    console.log()
     return (
       <div className='sidebar'>
-        {this.renderChats()}
+        <div className='title'> CHAT </div>
+        <ul className='chats'>
+          {this.renderChats()}
+        </ul>
       </div>
     )
   }

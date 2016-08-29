@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 const MENUS = [
   { name: 'Hello', price: '12.99' },
   { name: 'Hello1', price: '12.99' },
@@ -7,9 +9,12 @@ const MENUS = [
   { name: 'Hello', price: '12.99' }
 ]
 
+const _now = new Date().getTime()
+
 const CHATS = [
-  { sender: 'Assistant', timestamp: '2 mins ago', content: 'Good morning Chef! Looks like the meatball dish didn’t do well last week  ...', actionable: true },
-  { sender: 'Me (Sophie)', timestamp: '2 mins ago', content: 'Why not?', actionable: false },
+  { sender: 'Assistant', role: 'bot', timestamp: _now, content: 'Good morning Chef! Looks like the meatball dish didn’t do well last week  ...', actionable: true },
+  { sender: 'Me (Sophie)', role: 'client', timestamp: _now, content: 'Why not?', actionable: false },
+  { sender: 'Tom (Sysco MA)', role: 'sysco', timestamp: _now, content: 'Hey Sophie, you may want to try some lamb-based meatball recipes. We’ve seen some interesting market-ing stats in your region.', actionable: false },
 ]
 
 const REVIEWS = [
