@@ -34,12 +34,13 @@ export default React.createClass({
 
     return (
       <li className={'chat ' + chat.role}>
-        <div className='spliter'>_</div>
         <div className='sender-name'>
           {chat.sender}
           <span className='timestamp'> {moment(chat.timestamp).fromNow()} </span>
         </div>
-        {chat.content}
+        <div className='content'>
+          {chat.content}
+        </div>
         <div className='action-buttons'>
           {actionable}
         </div>

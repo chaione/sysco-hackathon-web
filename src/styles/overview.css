@@ -7,6 +7,30 @@
   overflow: scroll;
 }
 
-.sales-chart {
-  background-color: #181A1C;
+.panel.overview .top {
+  height: 70%;
+  width: 100%;
 }
+
+.panel.overview .top .top-item {
+  height: 100%;
+  display: inline-block;
+  width: 50%;
+}
+
+.top-item.menu-report {
+  border-right: 1px solid #EAEAEB;
+}
+
+.top-item {
+  border-bottom: 1px solid #EAEAEB;
+}
+
+.panel.overview .top .top-item .title {
+  color: #0A5293;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+

@@ -8,17 +8,18 @@ export default React.createClass({
   render () {
     return (
       <div className='panel overview'>
-        <div className='overview-section sales-chart'>
-          Suppose to be a chart
+        <div className='overview-section top'>
+          <div className='top-item menu-report'>
+            <div className='title'> MENU REPORT </div>
+          </div>
+
+          <div className='top-item whats-new'>
+            <div className='title'> WHAT'S NEW </div>
+          </div>
         </div>
 
-        <div className='overview-section inventories'>
-
-          Suppose to be inventory data
-        </div>
-
-        <div className='overview-section menu-items'>
-          Suppose to be some menu pics
+        <div className='overview-section featured-items'>
+          Suppose to be some featured items
         </div>
       </div>
     )

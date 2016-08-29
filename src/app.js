@@ -93,6 +93,10 @@ export default React.createClass({
   render () {
     return (
       <div className='app'>
+        <div className='app-header'>
+          <div>YES, CHEF</div>
+        </div>
+
         <Row className='show-grid content-row'>
           <Col xs={3} className='content-col'>
             <Sidebar chats={this.state.chats} sendChat={this.sendChat} />
